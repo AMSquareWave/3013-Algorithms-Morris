@@ -1,9 +1,31 @@
+/////////////////////////////////////////////////////
+//
+// Author: Terry Griffin (commented by Austin Morris)
+// Email (for commenter): ausmor23@gmail.com
+// Label: A02
+// Title: Code Commenting
+// Course: CMPS 3013
+// Semester: Spring 2020
+//
+// Description:
+//      This program is Dr. Griffin's uncommented
+//      implementation of a linked list. The program
+//      has been documented as part of a graded
+//      exercise in uploading files to github.
+//
+// Usage: Ask Terry Griffin first, it's not my IP
+//
+// Files: main.cpp
+
 #include <iostream>
 
 using namespace std;
 
 int A[100];
 
+
+// Node struct to make the linked list class more understandable
+// (without this an actual linked list would be difficult to make)
 struct Node {
     int x;
     Node *next;
@@ -17,6 +39,32 @@ struct Node {
     }
 };
 
+// List class
+//
+// Description:
+//      Uses the previously defined Node struct
+//      as a building block to drive the logic 
+//      behind a linked list.
+//
+// Public Methods: 
+//  - List() (Constructor)
+//  - Push(int) (No return type)
+//  - Insert(int) (No return type)
+//  - PrintTail() (No return type)
+//  - Print() (Returns string)
+//  - Pop() (Returns int)
+//  - + operator (Returns list)
+//  - [] operator (Returns int)
+//  - << operator (Returns ostream object)
+//
+// Private Methods:
+//  - No
+//
+// Usage:
+//  - Linked list things
+//  - ???
+//  - Not reinventing the wheel
+
 class List {
 private:
     Node *Head;
@@ -24,6 +72,7 @@ private:
     int Size;
 
 public:
+    // Easy constructor (both node pointers null)
     List() {
         Head = Tail = NULL;
         Size = 0;
